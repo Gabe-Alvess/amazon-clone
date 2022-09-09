@@ -1,0 +1,133 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #131921;
+}
+
+.header__logo {
+  width: 97px;
+  height: 50px;
+  padding-top: 10px;
+  margin-left: 22px;
+  margin-right: 18px;
+  object-fit: contain;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+}
+
+.header__searchInput {
+  height: 20px;
+  padding: 10px;
+  margin-left: 28px;
+  border: none;
+  width: 100%;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.header__linkSeachIcon {
+  color: black;
+  text-decoration: none;
+}
+
+.header__searchIcon {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  margin-right: 30px;
+  background-color: #febd69;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.header__searchIcon:hover {
+  background-color: #F3A847;
+}
+
+.header__nav {
+  margin-right: 30px;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+}
+
+.header__optionFlag {
+  display: flex;
+  align-items: center;
+}
+
+.header__optionUsFlag {
+  margin-right: 3px;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__optionLineOne {
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header__placeIcon {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.header__optionDeliver {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-bottom: 2px;
+}
+
+.header__optionLineDeliverTo {
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.header__optionLineBelgium {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header__optionShopCart {
+  display: flex;
+  align-items: center;
+  margin-right: 43px;
+  margin-bottom: 5px;
+}
+
+.header__shopCart {
+  position: absolute;
+}
+
+.header__shopCartCount {
+  margin-left: 18px;
+  margin-right: 20px;
+  padding-bottom: 19px;
+  font-size: 16.4px;
+  font-weight: 700;
+  color: #f0880a;
+}
+
+.header__optionCart {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 38px;
+  padding-bottom: 4px;
+}
