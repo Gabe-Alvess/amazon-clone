@@ -1,0 +1,48 @@
+.slider {
+  margin-bottom: -240px; /*negative margin creates overlap between product image and banner*/
+  height: 487px;
+  z-index: -1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 0px;
+  position: absolute;
+  top: 65px;
+}
+
+:root {
+  --swiper-theme-color: #cd9042 !important;
+}
+
+.slider__image {
+  mask-image: linear-gradient(
+    from middle to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  width: 100vw;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  min-width: 1200px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 130px !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  z-index: 2;
+  cursor: pointer;
+  color: black !important;
+  transition: 0.1s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  scale: 110%;
+  transition: 0.1s;
+}

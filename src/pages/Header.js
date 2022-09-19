@@ -5,13 +5,16 @@ import searchIcon from "../images/searchIcon.png";
 import placeIcon from "../images/place.png";
 import shopCart from "../images/shopCart.png";
 import flag from "../images/flag.png";
+import { useStateValue } from "../StateProvider";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function Header() {
+  const [{ cart }] = useStateValue();
+
   return (
     <nav className="header">
-      <Link to="/">
-        <div>
-          <span className="header__logoSpan"></span>
+      <Link to="/" className="header__link">
+        <div className="header__navLogo">
           <img
             className="header__logo"
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
@@ -23,7 +26,7 @@ function Header() {
       <div className="header__navPlace">
         <Link to="/login" className="header__link">
           <div className="header__placeIcon">
-            <img src={placeIcon} alt="" />
+            <img className="placeIcon" src={placeIcon} alt="" />
           </div>
           <div className="header__optionDeliver">
             <span className="header__optionLineDeliverTo">Deliver to</span>
@@ -42,26 +45,26 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to="/" className="header__link">
+        <Link to="/a" className="header__link">
           <div className="header__optionFlag">
             <img className="header__optionUsFlag" src={flag} alt="US Flag" />
-            <span className="header__optionLineTwo">EN</span>
+            <span className="header__optionLineTwo header__optionEnLine">EN<ArrowDropDownIcon className="arrowDropDown1" /></span>
           </div>
         </Link>
       </div>
 
       <div className="header__nav">
         <Link to="/login" className="header__link">
-          <div className="header__option">
+          <div className="header__option header__optionSingIn">
             <span className="header__optionLineOne">Hello, sign in</span>
-            <span className="header__optionLineTwo">Account & Lists</span>
+            <span className="header__optionLineTwo header__optionAccountLine">Account & Lists<ArrowDropDownIcon className="arrowDropDown2" /></span>
           </div>
         </Link>
       </div>
 
       <div className="header__nav">
         <Link to="/" className="header__link">
-          <div className="header__option">
+          <div className="header__option header__optionReturns">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo">& Orders</span>
           </div>
@@ -71,7 +74,7 @@ function Header() {
       <Link to="/checkout" className="header__link">
         <div className="header__optionShopCart">
           <img className="header__shopCart" src={shopCart} alt="" />
-          <span className="header__shopCartCount">0</span>
+          <span className="header__shopCartCount">{cart?.length}</span>
           <span className="header__optionLineTwo header__optionCart">Cart</span>
         </div>
       </Link>
