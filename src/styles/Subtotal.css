@@ -28,7 +28,10 @@
 }
 
 .subtotal > button:hover {
+  color: white;
   background-color: #f7ca00;
+  scale: 103%;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 1000px) {

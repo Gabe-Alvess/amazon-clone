@@ -1,12 +1,11 @@
 import React from "react";
-import "../Header.css";
+import "../styles/Header.css";
 import { Link } from "react-router-dom";
-import searchIcon from "../images/searchIcon.png";
-import placeIcon from "../images/place.png";
-import shopCart from "../images/shopCart.png";
-import flag from "../images/flag.png";
 import { useStateValue } from "../StateProvider";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/themes/light.css";
 
 function Header() {
   const [{ cart }] = useStateValue();
@@ -26,7 +25,7 @@ function Header() {
       <div className="header__navPlace">
         <Link to="/login" className="header__link">
           <div className="header__placeIcon">
-            <img className="placeIcon" src={placeIcon} alt="" />
+            <img className="placeIcon" src="./images/place.png" alt="" />
           </div>
           <div className="header__optionDeliver">
             <span className="header__optionLineDeliverTo">Deliver to</span>
@@ -39,16 +38,27 @@ function Header() {
         <input type="text" className="header__searchInput" />
         <Link to="/">
           <div className="header__searchBox">
-            <img className="header__searchIcon" src={searchIcon} alt="" />
+            <img
+              className="header__searchIcon"
+              src="./images/searchIcon.png"
+              alt=""
+            />
           </div>
         </Link>
       </div>
 
       <div className="header__nav">
-        <Link to="/a" className="header__link">
+        <Link to="/" className="header__link">
           <div className="header__optionFlag">
-            <img className="header__optionUsFlag" src={flag} alt="US Flag" />
-            <span className="header__optionLineTwo header__optionEnLine">EN<ArrowDropDownIcon className="arrowDropDown1" /></span>
+            <img
+              className="header__optionUsFlag"
+              src="./images/flag.png"
+              alt=""
+            />
+            <span className="header__optionLineTwo header__optionEnLine">
+              EN
+              <ArrowDropDownIcon className="arrowDropDown1" />
+            </span>
           </div>
         </Link>
       </div>
@@ -57,7 +67,10 @@ function Header() {
         <Link to="/login" className="header__link">
           <div className="header__option header__optionSingIn">
             <span className="header__optionLineOne">Hello, sign in</span>
-            <span className="header__optionLineTwo header__optionAccountLine">Account & Lists<ArrowDropDownIcon className="arrowDropDown2" /></span>
+            <span className="header__optionLineTwo header__optionAccountLine">
+              Account & Lists
+              <ArrowDropDownIcon className="arrowDropDown2" />
+            </span>
           </div>
         </Link>
       </div>
@@ -73,7 +86,11 @@ function Header() {
 
       <Link to="/checkout" className="header__link">
         <div className="header__optionShopCart">
-          <img className="header__shopCart" src={shopCart} alt="" />
+          <img
+            className="header__shopCart"
+            src="./images/shopCart.png"
+            alt=""
+          />
           <span className="header__shopCartCount">{cart?.length}</span>
           <span className="header__optionLineTwo header__optionCart">Cart</span>
         </div>

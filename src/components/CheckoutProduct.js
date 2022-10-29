@@ -1,6 +1,5 @@
 import React from "react";
-import star from "../images/star.png";
-import "../CheckoutProduct.css";
+import "../styles/CheckoutProduct.css";
 import { useStateValue } from "../StateProvider";
 
 function CheckoutProduct({ id, title, image, price, rating }) {
@@ -16,7 +15,6 @@ function CheckoutProduct({ id, title, image, price, rating }) {
   return (
     <div className="checkoutProduct">
       <img className="checkoutProduct__image" src={image} alt="" />
-
       <div className="checkoutProduct__info">
         <div className="checkoutProduct__titlePrice">
           <p className="checkoutProduct__title">{title}</p>
@@ -26,7 +24,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <img src={star} alt="" />
+              <img src="./images/star.png" alt="" />
             ))}
         </div>
 

@@ -1,24 +1,24 @@
 export const initialState = {
   cart: [
-    {
-      id: "12331243",
-      title:
-        "Acer Nitro 5 Gaming Laptop Intel Core i5-10300H NVIDIA GeForce RTX 3050",
-      price: 776.99,
-      rating: 5,
-      image:
-        "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81bc8mA3nKL._AC_SX355_.jpg",
-    },
+    // {
+    //   id: "12331243",
+    //   title:
+    //     "Acer Nitro 5 Gaming Laptop Intel Core i5-10300H NVIDIA GeForce RTX 3050",
+    //   price: 776.99,
+    //   rating: 5,
+    //   image:
+    //     "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81bc8mA3nKL._AC_SX355_.jpg",
+    // },
 
-    {
-      id: "12331243",
-      title:
-        "Acer Nitro 5 Gaming Laptop Intel Core i5-10300H NVIDIA GeForce RTX 3050",
-      price: 776.99,
-      rating: 5,
-      image:
-        "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81bc8mA3nKL._AC_SX355_.jpg",
-    },
+    // {
+    //   id: "12331243",
+    //   title:
+    //     "Acer Nitro 5 Gaming Laptop Intel Core i5-10300H NVIDIA GeForce RTX 3050",
+    //   price: 776.99,
+    //   rating: 5,
+    //   image:
+    //     "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81bc8mA3nKL._AC_SX355_.jpg",
+    // },
   ],
   user: null,
 };
@@ -41,7 +41,7 @@ const reducer = (state, action) => {
       //we cloned the cart
       let newCart = [...state.cart];
 
-      // we foun the index of the item we're looking for
+      // we found the index of the item we're looking for
       const index = state.cart.findIndex(
         (cartItem) => cartItem.id === action.id
       );

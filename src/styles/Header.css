@@ -1,19 +1,14 @@
 .header {
   display: flex;
   align-items: center;
-  position: sticky relative;
-  font-family: 'Amazon Ember', Arial, sans-serif;
+  position: sticky;
+  font-family: "Amazon Ember", Arial, sans-serif;
   top: 0;
   z-index: 100;
   width: 100%;
   height: 50px;
   padding: 7px 0px 4px 0px;
   background-color: #131921;
-}
-
-@media (max-width: 500px) {
-  .header {
-  }
 }
 
 .header__navLogo {
@@ -29,11 +24,13 @@
   padding: 10px 8px 0 6px;
   margin: 1px 1px 10px 1px;
   object-fit: contain;
+  border: 1px solid transparent;
 }
 
 .header__logo:hover {
   border: 1px solid white;
   border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__search {
@@ -62,6 +59,7 @@
 
 .header__searchIcon:hover {
   background-color: #f3a847;
+  transition: all 0.5s;
 }
 
 .header__nav {
@@ -75,11 +73,13 @@
   padding: 0px 9px 0px 0px;
   width: 90.5312;
   height: 50px;
+  border: 1px solid transparent;
 }
 
 .header__navPlace:hover {
   border: 1px solid white;
   border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__link {
@@ -95,11 +95,13 @@
   height: 45px;
   padding: 0px 9px 5px 9px;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .header__optionFlag:hover {
   border: 1px solid white;
   border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__optionUsFlag {
@@ -132,11 +134,13 @@
   padding: 10px 0px 0px 9px;
   margin-bottom: 7px;
   min-width: 110px;
+  border: 1px solid transparent;
 }
 
 .header__optionSingIn:hover {
   border: 1px solid white;
   border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__optionAccountLine {
@@ -151,7 +155,19 @@
 }
 
 .header__optionReturns {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 7px;
   min-width: 60px;
+  border: 1px solid transparent;
+}
+
+.header__optionReturns:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__optionLineOne {
@@ -200,8 +216,18 @@
 .header__optionShopCart {
   display: flex;
   align-items: center;
+  height: 40px;
+  width: 65px;
+  padding: 10px 10px 0px 10px;
   margin-right: 43px;
   margin-bottom: 5px;
+  border: 1px solid transparent;
+}
+
+.header__optionShopCart:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+  transition: all 0.5s;
 }
 
 .header__shopCart {

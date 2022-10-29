@@ -49,6 +49,9 @@
   margin-bottom: 20px;
 }
 
-.checkoutProduct > button:hover {
+.checkoutProduct__info > button:hover {
+  color: white;
   background-color: #f7ca00;
+  scale: 115%;
+  transition: all 0.3s ease-in-out;
 }

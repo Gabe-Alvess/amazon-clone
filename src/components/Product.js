@@ -1,6 +1,5 @@
 import React from "react";
-import "../Product.css";
-import star from "../images/star.png";
+import "../styles/Product.css";
 import { useStateValue } from "../StateProvider";
 
 function Product({ id, title, image, price, rating }) {
@@ -29,7 +28,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <img src={star} alt="" />
+              <img src="./images/star.png" alt="" />
             ))}
         </div>
         <p className="product__price">

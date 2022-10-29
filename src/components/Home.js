@@ -1,70 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Product from "./Product";
-// import "../Home.css";
-import "../ImageSlider.css"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import ImageSlider from "./ImageSlider";
+import "../styles/Home.css";
 
 function Home() {
   return (
     <div>
       <Header />
-      <div className="home">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={0}
-          grabCursor={true}
-          loop={true}
-          centeredSlides={true}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img
-              className="home__image"
-              src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61TD5JLGhIL._SX3000_.jpg"
-              alt=""
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img
-              className="home__image"
-              src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61jovjd+f9L._SX3000_.jpg"
-              alt=""
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img
-              className="home__image"
-              src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61DUO0NqyyL._SX3000_.jpg"
-              alt=""
-            />
-            <div className="gradient">abc</div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img
-              className="home__image"
-              src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71qid7QFWJL._SX3000_.jpg"
-              alt=""
-            />
-          </SwiperSlide>
-        </Swiper>
-
+      <ImageSlider />
+      <div>
         <div className="home__row">
           <Product
             id="12331243"
